@@ -17,7 +17,7 @@ int main()
             if(1&(a[j]>>i))
                 k++;
         }
-        if(k==0)
+        if(k==0||k==n)
             ans+=0;
         else
             ans+=(1<<i)*(1);
