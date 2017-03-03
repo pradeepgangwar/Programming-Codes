@@ -1,4 +1,4 @@
-# Programming-Codes [Greed For Code](http://greedforcode.blogspot.com)
+# Programming-Codes
 
 This repository contains basic programming concepts code and solution to various online judges.
 For detailed description about the concepts applied to particular question you can visit Blog - [Greed For Code](http://greedforcode.blogspot.com)

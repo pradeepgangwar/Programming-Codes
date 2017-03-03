@@ -1,4 +1,4 @@
-#include<iostream>
+#include<stdio.h>
 using namespace std;
 
 int rear=0,front=0;
@@ -47,5 +47,6 @@ int isempty(int front,int rear)
 int main()
 {
 
+    //your code here
 
 }
