@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
 
 	long long int n,a[20009],i,j,count=0;
 	scanf("%lld",&n);

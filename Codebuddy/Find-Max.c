@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
 
     long long int i,j,k,n,m,a[250],temp,pos,new,x,p=-1,y,c;
 
@@ -25,9 +26,7 @@ int main() {
       a[j]=a[pos];
      a[pos]=new;
     }
-    /*for(j=0;j<m;j++)
-        printf("%d,",a[j]);
-    printf("\n");*/
+    
       x=0;y=0;
       for(j=1;j<m;j++)
       {
