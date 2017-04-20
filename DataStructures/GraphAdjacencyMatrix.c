@@ -1,52 +1,63 @@
-/*
-Consider a graph with vertices numbered 0 to N, where N is entered by the user. Every vertex stores an integer, which is also supplied by the user. A vertex i is connected to the vertices i-2, i+1, i+2, i+5 and i+10 (if the indices exist).
-				Represent the graph using adjacency matrix
-*/
 
 #include<stdio.h>
 
 int main()
 {
-	int n,b[100],i,j;
+	int matrix[100][100],n,edges,i,j,origin,dest,choice;
+	printf("Enter 1 for directed graph and 2 for undirected graph: ");
+	scanf("%d",&choice);
+	
 	printf("Enter the number of nodes: ");
 	scanf("%d",&n);
-	int a[n+1][n+1];
 	
-	for(i=0;i<=n;i++)
-	{
-		for(j=0;j<=n;j++)
-			a[i][j]=0;
-	}
+	if(choice==2)
+		edges = n*(n-1)/2;
+	else
+		edges = n*(n-1);
 	
-	printf("Enter the integers on each node: \n");
-	for(i=0;i<=n;i++)
-	{	
-		printf("for %d: ",i);
-		scanf("%d",&b[i]);
-	}
-		
-	for(i=0;i<=n;i++)
+	printf("Note: Nodes are indexed at 0\n");
+	
+	for(i=1;i<=edges;i++)
 	{
-		if(i-2>=0 && i-2<=n)
-			a[i][i-2]=1;
-		if(i+1>=0 && i+1<=n)
-			a[i][i+1]=1;
-		if(i+2>=0 && i+2<=n)
-			a[i][i+2]=1;
-		if(i+5>=0 && i+5<=n)
-			a[i][i+5]=1;
-		if(i+10>=0 && i+10<=n)
-			a[i][i+10]=1;
-	}
-	for(i=0;i<=n;i++)
-	{
-		for(j=0;j<=n;j++)
+		printf("Enter the %d edge or (-1,-1) to quit: ",i);
+		scanf("%d %d",&origin,&dest);
+		if(origin==-1 && dest==-1)
+			break;
+		else
+		{
+			if(origin>=n || dest>=n || origin<0 || dest<0)
 			{
-				printf("%d ",a[i][j]);
+				printf("Invalid edges points, Try Again\n");
+				i--;
+			}
+			else
+			{
+				matrix[origin][dest] =  1;
+				if(choice==2)
+					matrix[dest][origin] = 1;
+			}
+		}
+	}
+	
+	printf("The matrix is:\n");
+	printf(" ");
+	for(i=0;i<n;i++)
+		printf(" %d",i);
+	printf("\n");
+	for(i=0;i<2*n;i++)
+		printf("-");
+	printf("\n");
+	
+	for(i=0;i<n;i++)
+	{
+		printf("%d|",i);
+		for(j=0;j<n;j++)
+			{
+				printf("%d ",matrix[i][j]);
 			}
 		printf("\n");
 	}
-	for(i=0;i<=n;i++)
+	/*for(i=0;i<=n;i++)
 	{
 		printf("%d is connected to : ",b[i]);
 		for(j=0;j<=n;j++)
@@ -55,5 +66,5 @@ int main()
 				printf("%d ",b[j]);
 		}
 		printf("\n");
-	}	
+	}	*/
 }
