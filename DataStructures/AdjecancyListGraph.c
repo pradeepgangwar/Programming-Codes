@@ -11,7 +11,7 @@ typedef struct node NODE;
 
 NODE *first_edge(NODE *start[], int a, int b)
 {
-	NODE *tmp,*p;
+	NODE *tmp;
 	tmp = (NODE *)malloc(sizeof(NODE));
 	tmp -> info = b;
 	tmp -> next = start[a];
@@ -51,7 +51,6 @@ NODE *insert_edge(NODE *start[], int a, int b,int n)
 			flag = 1;
 			break;
 		}
-		printf("Hello1");
 		p = p->next;
 	}
 	if(flag == 0)

@@ -57,14 +57,4 @@ int main()
 			}
 		printf("\n");
 	}
-	/*for(i=0;i<=n;i++)
-	{
-		printf("%d is connected to : ",b[i]);
-		for(j=0;j<=n;j++)
-		{
-			if(a[i][j]==1)
-				printf("%d ",b[j]);
-		}
-		printf("\n");
-	}	*/
 }
