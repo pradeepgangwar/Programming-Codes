@@ -7,4 +7,4 @@ For detailed description about the concepts applied to particular question you c
       Understand The logic and apply the code part yourself. 
       
 ## More problems from SPOJ and other platforms will be added soon. 
-##And blog mentioned above currently doesn't has solution to all problem code given in this repo. Description of every problem in this repo will be added soon
+### And blog mentioned above currently doesn't has solution to all problem code given in this repo. Description of every problem in this repo will be added soon
