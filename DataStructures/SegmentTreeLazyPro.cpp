@@ -84,28 +84,27 @@ void update_range(int node, int start, int end, int l, int r, int val)
 	tree[node] = tree[2*node] + tree[2*node+1];
 }
 
-void update(int node,int start, int end, int index, int value)
-{
-    if(start == end)
-    {
-        a[index] = value;   
-        tree[node] = value;
-    }
-    else
-    {
-        int mid = (start + end) / 2;
-        if(start <= index && index <= mid)
-        {
-            update(2*node, start, mid, index, value);
-        }
-        else
-        {
-            update(2*node+1, mid+1, end, index, value);
-        }
-        tree[node] = tree[2*node]+tree[2*node+1];
-    }
-    
-}
+// void update(int node,int start, int end, int index, int value)
+// {
+//     if(start == end)
+//     {
+//         a[index] = value;   
+//         tree[node] = value;
+//     }
+//     else
+//     {
+//         int mid = (start + end) / 2;
+//         if(start <= index && index <= mid)
+//         {
+//             update(2*node, start, mid, index, value);
+//         }
+//         else
+//         {
+//             update(2*node+1, mid+1, end, index, value);
+//         }
+//         tree[node] = tree[2*node]+tree[2*node+1];
+//     }
+// }
 
 int main()
 {
